@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    margin: 0;
+    background-color: #1e1e1e;
+    background-image: url('project-image3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #f0f0f0;
+}
+
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    background-color: rgba(44, 44, 44, 0.85);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+}
+
+h1 {
+    text-align: center;
+    font-size: 28px;
+    color: goldenrod;
+    margin-bottom: 20px;
+}
+
+#songList {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+#songList li {
+    padding: 14px;
+    border-bottom: 1px solid #3a3a3a;
+    transition: all 0.3s ease;
+    color: #dddddd;
+}
+
+#songList li:hover {
+    background-color: #2a2a2a;
+    color: gold;
+}
+
+#songList button {
+    margin-right: 10px;
+    margin-top: 8px;
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#songList button:hover {
+    background-color: #666;
+}
+
+.player {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #2c2c2c;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#audioPlayer {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    background-color: #1e1e1e;
+}
+
+#lyrics {
+    white-space: pre-line;
+    font-size: 0.95em;
+    color: #cccccc;
+    line-height: 1.7;
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+#lyrics span {
+    display: block;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    padding: 4px 0;
+}
+
+#lyrics span:hover {
+    background-color: #383838;
+}
+
+#lyrics span.highlight {
+    color: gold;
+    font-weight: bold;
+    background-color: #444444;
+}
+
+.quiz-box {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.quiz-content {
+    background: #2c2c2c;
+    color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    overflow-y: auto;
+}
+
+.quiz-content button {
+    margin-top: 20px;
+    background-color: #f8b5c1;
+    color: #1e1e1e;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.quiz-content button:hover {
+    background-color: #ffc0cb;
+}
+
+.leaderboard-box {
+    margin-top: 30px;
+    background-color: #2c2c2c;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 0 8px rgba(255,255,255,0.05);
+}
+.quiz-content p {
+    font-size: 1.1em;
+    margin-bottom: 12px;
+}
+
+.quiz-content ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+.quiz-content li {
+    margin-bottom: 8px;
+}
+.submit-score-btn {
+    background-color: pink; /* 你想要的背景顏色（藍色範例） */
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px; /* 保持與原有樣式的一致性 */
+}
+
+.submit-score-btn:hover {
+    background-color: plum; /* 滑鼠懸停時的顏色 */
+}

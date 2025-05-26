@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日文歌曲播放器</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>日文歌曲學習挑戰</h1>
+        <ul id="songList"></ul>
+
+        <div class="player">
+            <audio id="audioPlayer" controls></audio>
+            <div id="lyrics"></div>
+        </div>
+
+        <!-- 排行榜 -->
+        <div id="leaderboard" class="leaderboard-box"></div>
+    </div>
+
+    <!-- 測驗視窗 -->
+    <div id="modal" class="quiz-box" style="display: none;"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
